@@ -4,12 +4,16 @@ import { Product } from "../Product";
 import { StyledUl } from "./style";
 
 export const ProductsList = () => {
-  const { products } = useContext(productContext);
+  const { products, filteredProducts } = useContext(productContext);
   return (
     <StyledUl>
-      {products.map((element) => (
-        <Product key={element.id} element={element} />
-      ))}
+      {filteredProducts.length
+        ? filteredProducts.map((element) => (
+            <Product key={element.id} element={element} />
+          ))
+        : products.map((element) => (
+            <Product key={element.id} element={element} />
+          ))}
     </StyledUl>
   );
 };

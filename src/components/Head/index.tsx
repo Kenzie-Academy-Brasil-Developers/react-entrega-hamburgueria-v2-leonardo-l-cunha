@@ -5,8 +5,14 @@ import { Container } from "../../styles/Container";
 import { StyledDiv, StyleHeader } from "./style";
 
 export const HeaderPage = () => {
-  const { openModal, setOpenModal, count, products, setProduct } =
-    useContext(productContext);
+  const {
+    openModal,
+    setOpenModal,
+    count,
+    products,
+    setProduct,
+    setFilteredProducts,
+  } = useContext(productContext);
   const [inputValue, setInputValue] = useState("");
   const navigate = useNavigate();
 
@@ -14,7 +20,7 @@ export const HeaderPage = () => {
     const data = products?.filter((element) => {
       return element.category.toUpperCase().includes(inputValue.toUpperCase());
     });
-    setProduct(data);
+    setFilteredProducts(data);
   };
   const reload = () => {
     window.location.reload();
