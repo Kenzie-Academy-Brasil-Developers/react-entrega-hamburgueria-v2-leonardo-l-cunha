@@ -6,6 +6,7 @@ import { createGlobalStyle  } from "styled-components";
 
     :root {
     --color-background: #FFFFFF;
+    --color-background-2:rgba(0,0,0,.25);
     --color-primary: #27AE60;
     --color-primary-50: #93D7AF;
     --color-primary-100:#219653;

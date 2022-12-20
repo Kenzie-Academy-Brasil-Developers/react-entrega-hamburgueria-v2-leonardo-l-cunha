@@ -117,12 +117,16 @@ export const FormStyled = styled.form`
         border-radius: 8px;
         color:var(--color-background);
     }
-    && a button {
+    && a {
         width:100%;
         height:50px;
         background-color:var(--color-grey-0);
         border-radius: 8px;
         color:var(--color-grey-5);
+        text-decoration:none;
+        display:flex;
+        justify-content:center;
+        align-items:center;
     }
     && span {
     width: 64%;

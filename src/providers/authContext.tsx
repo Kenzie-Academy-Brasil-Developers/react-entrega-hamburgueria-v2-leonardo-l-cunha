@@ -83,7 +83,7 @@ export const AuthProvider = ({ children }: iChildrenProviderPros) => {
         navigate("/home");
       }, 3000);
     } catch (error: any | AxiosError) {
-      toast.error(error.response.data);
+      toast.error("E-mail/Senha incorreto");
     }
   };
   return (
